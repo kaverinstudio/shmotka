@@ -1,0 +1,11 @@
+@import 'variables';
+@import 'components/all';
+@import 'libs/normalize';
+
+.wrapper{
+  height: 100vh;
+  margin: auto;
+  display: flex;
+}
+
+
