@@ -15,6 +15,7 @@ import {useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import {useDispatch} from "react-redux";
+import {login} from "../../../assets/api/user";
 
 const schema = yup.object().shape({
     user: yup.string().required('Это поле должно быть заполнено').min(2, 'Количество символов не может быть меньше 2').max(60, 'Количество символов не может быть больше 60'),
@@ -42,7 +43,7 @@ const Login = ({onRegister}) => {
     })
 
     const onSubmit = (event) => {
-        dispatch()
+        dispatch(login(event.user, event.password))
         reset()
     };
 

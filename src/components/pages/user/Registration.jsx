@@ -15,6 +15,7 @@ import {
 } from "@mui/material";
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import {useDispatch} from "react-redux";
+import {registration} from "../../../assets/api/user";
 
 const schema = yup.object().shape({
     name: yup.string().required('Это поле должно быть заполнено').min(2, 'Количество символов не может быть меньше 2').max(60, 'Количество символов не может быть больше 60'),
@@ -44,7 +45,7 @@ const Registration = ({onLogin}) => {
     })
 
     const onSubmit = (event) => {
-        dispatch()
+        dispatch(registration(event.name, event.email, event.password))
         reset()
     };
 

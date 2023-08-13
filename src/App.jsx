@@ -5,7 +5,7 @@ import Main from "./components/pages/Main";
 import User from "./components/pages/user/User";
 
 function App() {
-    const isAuthenticated = true
+    const isAuthenticated = false
 
     if (!isAuthenticated) {
         return <User />;
