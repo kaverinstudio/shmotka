@@ -14,6 +14,10 @@ function App() {
         dispatch(auth())
     },[])
 
+    const test = () =>{
+        return false
+    }
+
     const isAuthenticated = useSelector(state => state.auth.isAuthenticated)
 
     if (!isAuthenticated) {
